@@ -1,14 +1,19 @@
 import Image from 'next/image';
+import DashboardA from './_components/dashboardA';
+import DashboardB from './_components/dashboardB';
 
 export default function Dashboard() {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center gap-y-8'>
       <BiroPageImage />
-      <div>
+      <div className='lato-bold text-3xl'>
         Welcome back, User
       </div>
       <div>
-        
+        <DashboardA />
+      </div>
+      <div>
+        <DashboardB />
       </div>
     </div>
   );
