@@ -1,6 +1,6 @@
 import React from "react";
-import ComplaintForm from "../../components/complaint_form/complaint_form";
-import SimilarIssueContainer from "@/components/complaint_form/similar_issue._container";
+import ComplaintForm from "./_components/complaint_form";
+import SimilarIssueContainer from "./_containers/similar_issue";
 import Breadcrumb from "@/components/breadcrumb";
 
 const CreateComplaintPage = () => {

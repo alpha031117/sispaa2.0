@@ -1,6 +1,8 @@
 'use client';
+
 import React, { useState } from "react";
 import { PhotoIcon } from '@heroicons/react/24/solid';
+import MapComponent from "./map";
 
 interface TypeOption {
     label: string;
@@ -13,6 +15,9 @@ export default function CreateComplaint() {
   
     // Define state for the selected type
     const [selectedType, setSelectedType] = useState<string>("");
+
+    // Define state for rendering the map
+    const [renderMap, setRenderMap] = useState<boolean>(false);
   
     // Define complaint types array
     const types: TypeOption[] = [
@@ -25,6 +30,11 @@ export default function CreateComplaint() {
     // Handle selection of complaint type
     const handleSelectType = (type: string) => {
       setSelectedType(type);
+    };
+
+    const handleRenderMapButton = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        setRenderMap(!renderMap);
     };
 
     return (
@@ -127,7 +137,7 @@ export default function CreateComplaint() {
                             <label htmlFor="location" className="block text-sm font-medium leading-6 text-gray-900">
                                 Location
                             </label>
-                            <div className="mt-2">
+                            <div className="mt-2 flex flex-row gap-x-8">
                                 <input
                                     id="location"
                                     name="location"
@@ -135,7 +145,15 @@ export default function CreateComplaint() {
                                     placeholder="Enter location"
                                     className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 ${placeholderPaddingClass}`}
                                 />
+                                <button onClick={(e) => handleRenderMapButton(e)} className="bg-accent_blue px-4 rounded-md text-white">
+                                    Map
+                                </button>
                             </div>
+                            {renderMap && (
+                                <div>
+                                    <MapComponent />
+                                </div>
+                            )}
                         </div>
 
                         {/* Upload section */}

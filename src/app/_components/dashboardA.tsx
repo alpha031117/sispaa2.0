@@ -9,7 +9,7 @@ const DashboardA = () => {
             <div className='flex flex-col w-[300px] shadow-lg p-4 rounded-lg bg-secondary_white justify-between'>
                 <div className='lato-semibold'>Total Complaints</div>
                 <div className='text-gray-500'>11</div>
-                <Link href={'/new-complaint'} className='self-end text-sm lato-semibold bg-accent_blue text-white pl-3 pr-7 py-1.5 rounded-md'>+ &nbsp; File a Complaint</Link>
+                <Link href={'/create-complaint'} className='self-end text-sm lato-semibold bg-accent_blue text-white pl-3 pr-7 py-1.5 rounded-md'>+ &nbsp; File a Complaint</Link>
             </div>
             <div className='flex flex-col w-[300px] shadow-lg p-4 rounded-lg bg-secondary_white justify-start gap-y-4'>
                 <div className='lato-semibold'>This Week</div>
