@@ -4,6 +4,7 @@ const solved_complaint = [
     {
       name: 'Eelctric Pole Damaged',
       caseID: '1010000023456',
+      summaryDetails: 'Electric pole is damaged and needs to be replaced.',
       status: 'Resolved',
       similarity: '90%',
       imageUrl: '/images/kplb.png',
@@ -11,6 +12,7 @@ const solved_complaint = [
     {
         name: 'Eelctric Pole Damaged',
         caseID: '1010000023456',
+        summaryDetails: 'Electric pole is damaged and needs to be replaced.',
         status: 'Resolved',
         similarity: '80%',
         imageUrl: '/images/kplb.png',
@@ -18,6 +20,7 @@ const solved_complaint = [
     {
         name: 'Eelctric Pole Damaged',
         caseID: '1010000023456',
+        summaryDetails: 'Electric pole is damaged and needs to be replaced.',
         status: 'Rejected',
         similarity: '70%',
         imageUrl: '/images/kplb.png',
@@ -38,7 +41,8 @@ export default function SimilarIssueContainer() {
             <ul role="list" className="divide-y divide-gray-100 p-10">
                 <div className="flex min-w-0 gap-x-4">
                     <div className="min-w-0 flex-auto">
-                        <p className="text-sm font-semibold leading-6 text-gray-900">Similarity</p>
+                        {/* <p className="text-sm font-semibold leading-6 text-gray-900">Similarity</p> */}
+                        <p className="text-sm font-semibold leading-6 text-gray-900">Title</p>
                     </div>
                     <div className='min-w-1 flex-1'>
                         <p className="text-sm font-semibold leading-6 text-gray-900">&nbsp;&nbsp;Status</p>
@@ -49,11 +53,11 @@ export default function SimilarIssueContainer() {
                     <li key={person.name} className="flex justify-between gap-x-6 py-5">
                     <div className="flex min-w-0 gap-x-4">
                         {/* <img alt="" src={person.imageUrl} className="h-10 w-12 flex-none rounded-full bg-gray-50" /> */}
-                        <p className="text-sm font-semibold leading-6 text-gray-900">{person.similarity}</p>
-                        <div className="min-w-0 flex-auto">
+                        {/* <p className="text-sm font-semibold leading-6 text-gray-900">{person.similarity}</p> */}
+                        <div className="min-w-0 max-w-60 flex-auto">
                             <p className="text-sm font-semibold leading-6 text-gray-900">{person.name}</p>
-                            <p className="mt-1 truncate text-xs leading-5 text-gray-500">{person.caseID}</p>
-
+                            {/* <p className="mt-1 truncate text-xs leading-5 text-gray-500">{person.caseID}</p> */}
+                            <p className="mt-1 truncate text-xs leading-5 text-gray-700 break-words">{person.summaryDetails}</p>
                         </div>
                         <div className='min-w-1 flex-1'>
                             <p
