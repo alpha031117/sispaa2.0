@@ -8,11 +8,13 @@ const Chatbot = () => {
     return (
         <div className='flex flex-col items-end'>
             {renderChatbotPanel && <ChatbotPanel setRenderChatbotPanel={setRenderChatbotPanel} />}
-            <button onClick={() => setRenderChatbotPanel(true)}>
-                <div className='bg-accent_blue lato-bold rounded-t-md py-1 px-12 text-white'>
-                    ChatBot
-                </div>
-            </button>
+            {!renderChatbotPanel && (
+                <button onClick={() => setRenderChatbotPanel(true)}>
+                    <div className='bg-accent_blue lato-bold rounded-t-md py-1 px-12 text-white'>
+                        ChatBot
+                    </div>
+                </button>
+            )}
         </div>
     )
 }
@@ -88,14 +90,6 @@ const ChatbotPanel: React.FC<ChatbotPanelProps> = ({ setRenderChatbotPanel }) =>
                     <button onClick={handleSend} className='bg-accent_blue text-white rounded-md px-4 ml-2'>Send</button>
                 </div>
             </form>
-        </div>
-    )
-}
-
-const TestCOmpo = () => {
-    return (
-        <div>
-            Hi
         </div>
     )
 }

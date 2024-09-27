@@ -4,7 +4,7 @@ import DashboardB from './_components/dashboardB';
 
 export default function Dashboard() {
   return (
-    <div className='flex flex-col items-center gap-y-8'>
+    <div className='flex flex-col items-center gap-y-16'>
       <BiroPageImage />
       <div className='lato-bold text-3xl'>
         Welcome back, User
