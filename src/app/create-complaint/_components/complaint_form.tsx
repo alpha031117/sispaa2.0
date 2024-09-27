@@ -42,7 +42,7 @@ export default function CreateComplaint() {
         <form className="max-w-4xl mx-auto p-6">
             <div className="space-y-12">
                 <div className="border-b border-gray-900/10 pb-12">
-                    <h2 className="text-lg font-semibold leading-7 text-gray-900">File a Complaint</h2>
+                    <h2 className="text-lg font-semibold leading-7 text-gray-900">File a {selectedType}</h2>
                     <p className="mt-1 text-sm leading-6 text-gray-600">
                         Please provide accurate information to ensure prompt action on your complaint.
                     </p>
@@ -187,12 +187,9 @@ export default function CreateComplaint() {
                     <Link href="/" className="text-sm font-semibold leading-6 text-gray-900">
                         Cancel
                     </Link>
-                    <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
-                        Cancel
-                    </button>
                     <Link
                         href="/success-complaint"
-                        className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        className="rounded-md bg-accent_blue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#1553DB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                         Submit Complaint
                     </Link>

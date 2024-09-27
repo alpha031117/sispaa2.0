@@ -7,8 +7,8 @@ const Chatbot = () => {
 
     return (
         <div className='flex flex-col items-end'>
-            {renderChatbotPanel && <ChatbotPanel />}
-            <button onClick={() => setRenderChatbotPanel(!renderChatbotPanel)}>
+            {renderChatbotPanel && <ChatbotPanel setRenderChatbotPanel={setRenderChatbotPanel} />}
+            <button onClick={() => setRenderChatbotPanel(true)}>
                 <div className='bg-accent_blue lato-bold rounded-t-md py-1 px-12 text-white'>
                     ChatBot
                 </div>
@@ -24,7 +24,11 @@ type conversation = {
     message: string;
 }
 
-const ChatbotPanel = () => {
+interface ChatbotPanelProps {
+    setRenderChatbotPanel: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const ChatbotPanel: React.FC<ChatbotPanelProps> = ({ setRenderChatbotPanel }) => {
     const [conversation, setConversation] = useState<conversation[]>([]);
     const [userInput, setUserInput] = useState<string>('');
     const [responseIndex, setResponseIndex] = useState<number>(0);
@@ -55,7 +59,9 @@ const ChatbotPanel = () => {
 
     return (
         <div className='flex flex-col justify-between bg-white rounded-b-md py-2 w-[21rem] h-[25rem] shadow-xl self-start text-gray-900 border border-gray-300 backdrop-blur-sm p-2 rounded-md'>
-            <p>Chatbot Panel</p>
+            <button onClick={() => setRenderChatbotPanel(false)}>
+                <p>Chatbot Panel</p>
+            </button>
             <hr className='border-gray-300 my-2' />
 
             {/* Chat conversation */}
@@ -82,6 +88,14 @@ const ChatbotPanel = () => {
                     <button onClick={handleSend} className='bg-accent_blue text-white rounded-md px-4 ml-2'>Send</button>
                 </div>
             </form>
+        </div>
+    )
+}
+
+const TestCOmpo = () => {
+    return (
+        <div>
+            Hi
         </div>
     )
 }
