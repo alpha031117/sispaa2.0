@@ -15,17 +15,17 @@ export default function CreateComplaint() {
     const placeholderPaddingClass = "placeholder:px-3"; // Custom class for placeholder padding
   
     // Define state for the selected type
-    const [selectedType, setSelectedType] = useState<string>("");
+    const [selectedType, setSelectedType] = useState<string>("Complaint");
 
     // Define state for rendering the map
     const [renderMap, setRenderMap] = useState<boolean>(false);
   
     // Define complaint types array
     const types: TypeOption[] = [
-      { label: "Complaint", color: "bg-red-300", icon: "✏️" },
-      { label: "Enquiry", color: "bg-yellow-300", icon: "❓" },
-      { label: "Suggestion", color: "bg-green-300", icon: "💡" },
-      { label: "Appreciation", color: "bg-pink-300", icon: "✏️" }
+      { label: "Complaint", color: "bg-yellow-400 border border-black", icon: "✏️" },
+      { label: "Enquiry", color: "bg-gray-300 border border-black", icon: "❓" },
+      { label: "Suggestion", color: "bg-gray-300 border border-black", icon: "💡" },
+      { label: "Appreciation", color: "bg-gray-300 border border-black", icon: "✏️" }
     ];
   
     // Handle selection of complaint type
@@ -57,11 +57,11 @@ export default function CreateComplaint() {
                                 {types.map((type) => (
                                     <button
                                     key={type.label}
-                                    onClick={() => handleSelectType(type.label)}
+                                    onClick={(e) => {e.preventDefault(); handleSelectType(type.label)}}
                                     className={`${type.color} p-4 rounded-md shadow-lg flex flex-col items-center justify-center ${
                                         selectedType === type.label
-                                        ? "ring-4 ring-gray-400"
-                                        : "hover:ring-2 hover:ring-gray-300"
+                                        ? "ring-4 ring-gray-400 shadow-yellow-300 shadow-lg"
+                                        : "hover:ring-2 hover:ring-gray-300 hover:border-2 hover:scale-100 scale-75"
                                     }`}
                                     >
                                     <div className="text-3xl">{type.icon}</div>
@@ -184,18 +184,17 @@ export default function CreateComplaint() {
 
                 {/* Submit */}
                 <div className="mt-6 flex items-center justify-end gap-x-6">
-                    <Link href="/">
-                        <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
-                            Cancel
-                        </button>
+                    <Link href="/" className="text-sm font-semibold leading-6 text-gray-900">
+                        Cancel
                     </Link>
-                    <Link href="/success-complaint">
-                        <button
-                            // type="submit"
-                            className="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        >
-                            Submit Complaint
-                        </button>
+                    <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
+                        Cancel
+                    </button>
+                    <Link
+                        href="/success-complaint"
+                        className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    >
+                        Submit Complaint
                     </Link>
                 </div>
             </div>

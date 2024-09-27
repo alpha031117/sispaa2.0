@@ -1,5 +1,6 @@
 import React from "react";
 import ComplaintForm from "./_components/complaint_form";
+import Chatbot from "./_components/chatbot";
 import SimilarIssueContainer from "./_containers/similar_issue";
 import Breadcrumb from "@/components/breadcrumb";
 
@@ -34,12 +35,8 @@ const CreateComplaintPage = () => {
                     </div>
 
                     {/* Chatbot Container */}
-                    <div className={containerClasses}>
-                        <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                            <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950">
-                                Chatbot
-                            </p>
-                        </div>
+                    <div className="fixed bottom-0 self-end mr-6">
+                        <Chatbot />
                     </div>
                 </div>
             </div>
