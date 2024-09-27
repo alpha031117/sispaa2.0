@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const Element = () => {
-
-
-    return (
-        <div>JSX code here </div>
-    )
+function page() {
+  return (
+    <div>page</div>
+  )
 }
-export default Element;
+
+export default page
