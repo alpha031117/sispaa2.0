@@ -2,10 +2,8 @@
                    
 import Link from "next/link";
 import ComplaintProcess from "./_components/complaint_process";
+import DarkGlassBiroImage from "@/components/darkGlassBiroImage";
 import { useEffect, useState } from "react";
-import DarkGlassBiroImage from '@/components/darkGlassBiroImage';
-import DashboardA from './_components/dashboardA';
-import DashboardB from './_components/dashboardB';
 
 const ReportPage = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -26,7 +24,7 @@ const ReportPage = () => {
       setIsMounted(true); // Set mounted to true when the component mounts
       const animateCount = (setCount: React.Dispatch<React.SetStateAction<number>>, finalCount: number) => {
         let start = 0;
-        const duration = 2000;
+        const duration = 3200;
         const increment = finalCount / (duration / 16.66);
   
         const countUp = () => {
@@ -56,10 +54,8 @@ const ReportPage = () => {
     return (
         <div className="min-h-screen">
           {/* Banner Section */}
-          <div className="relative w-full h-48 bg-black text-white py-4">
-            <div className="container mx-auto">
-              <h1 className="text-4xl font-bold text-center">Banner</h1>
-            </div>
+          <div className='flex flex-col items-center'>
+            <DarkGlassBiroImage />
           </div>
   
           {/* Login Section */}

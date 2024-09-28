@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "../components/navbar/registered_nabvar";
+import NavbarWrapper from "@/components/navbarWrapper";
 import FloatingChatbotWrapper from "@/components/floatingChatbotWrapper";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className={`lato-regular antialiased`}>
         <div className="flex flex-col">
           <div className="h-fit flex-none sticky top-0 z-50">
-            <Navbar />
+            <NavbarWrapper />
           </div>
           <FloatingChatbotWrapper />
           <div className="flex-1">

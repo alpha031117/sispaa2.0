@@ -8,7 +8,7 @@ export default function FloatingChatbotWrapper() {
 
     const excludedRoutes = ["/login", "/create-complaint"];
 
-    const isLoginRoute = excludedRoutes.includes(pathname);
+    const isExcludedRoute = excludedRoutes.includes(pathname);
 
-    return !isLoginRoute ? <FloatingChatbot /> : null;
+    return isExcludedRoute ? null : <FloatingChatbot />;
 }
