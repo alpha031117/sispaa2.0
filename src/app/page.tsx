@@ -1,7 +1,11 @@
 "use client";
+                   
 import Link from "next/link";
 import ComplaintProcess from "./_components/complaint_process";
 import { useEffect, useState } from "react";
+import DarkGlassBiroImage from '@/components/darkGlassBiroImage';
+import DashboardA from './_components/dashboardA';
+import DashboardB from './_components/dashboardB';
 
 const ReportPage = () => {
     const [isMounted, setIsMounted] = useState(false);

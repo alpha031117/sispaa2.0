@@ -4,6 +4,19 @@
 
 /* Lato font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,500;0,600;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* Custom font */
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../../public/font/BebasNeue-Regular.ttf') format('truetype');
+}
+
+.bebas-neue-regular {
+  font-family: 'BebasNeue', system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .lato-thin {
   font-family: "Lato", system-ui;
   font-weight: 100;
@@ -80,4 +93,12 @@ body {
   :root {
     --radius: 0.5rem;
   }
+}
+
+.title-standout-text {
+  text-shadow: 2px 2px 4px #a0a0a0;
+}
+
+.smartSelangor-standout-text {
+  text-shadow: 1px 1px 2px #8b5252;
 }
