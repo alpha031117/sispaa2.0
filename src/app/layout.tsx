@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "../components/navbar";
+import Navbar from "../components/navbar/registered_nabvar";
 import FloatingChatbotWrapper from "@/components/floatingChatbotWrapper";
 
 export const metadata: Metadata = {
