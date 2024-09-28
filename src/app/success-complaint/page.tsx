@@ -14,9 +14,9 @@ const ComplaintSuccess = () => {
 
     return (
         <>
-            <div className="p-5">
+            {/* <div className="p-5">
                 <Breadcrumb />
-            </div>
+            </div> */}
             
             <div className="flex flex-col items-center justify-center h-[70vh] overflow-hidden">
                 {/* Success Icon */}

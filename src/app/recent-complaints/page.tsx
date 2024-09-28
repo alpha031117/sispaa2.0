@@ -7,9 +7,9 @@ import ComplaintList from './_components/complaint_list';
 const ComplaintListPage = () => {
     return (
         <>
-            <div className="p-5">
+            {/* <div className="p-5">
                 <Breadcrumb />
-            </div>
+            </div> */}
 
             <div className="p-6 min-h-screen">
                 {/* Status Cards */}

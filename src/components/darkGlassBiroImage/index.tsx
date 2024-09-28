@@ -6,7 +6,7 @@ const DarkGlassBiroImage = () => {
     const iconURL = '/images/biro_sispa_icon.png';
 
     return (
-        <div className="relative w-[1000px] h-[206px]">
+        <div className="relative w-full h-[206px]">
             <Image
                 src={imageURL}
                 alt="Dark Glass Biro Image"

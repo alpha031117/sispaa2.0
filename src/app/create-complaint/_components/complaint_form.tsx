@@ -22,10 +22,10 @@ export default function CreateComplaint() {
   
     // Define complaint types array
     const types: TypeOption[] = [
-      { label: "Complaint", color: "bg-yellow-400 border border-black", icon: "✏️" },
-      { label: "Enquiry", color: "bg-gray-300 border border-black", icon: "❓" },
-      { label: "Suggestion", color: "bg-gray-300 border border-black", icon: "💡" },
-      { label: "Appreciation", color: "bg-gray-300 border border-black", icon: "✏️" }
+      { label: "Complaint", color: "bg-red-200", icon: "✏️" },
+      { label: "Enquiry", color: "bg-blue-300", icon: "❓" },
+      { label: "Suggestion", color: "bg-blue-300", icon: "💡" },
+      { label: "Appreciation", color: "bg-blue-300", icon: "✏️" }
     ];
   
     // Handle selection of complaint type
@@ -60,8 +60,8 @@ export default function CreateComplaint() {
                                     onClick={(e) => {e.preventDefault(); handleSelectType(type.label)}}
                                     className={`${type.color} p-4 rounded-md shadow-lg flex flex-col items-center justify-center ${
                                         selectedType === type.label
-                                        ? "ring-4 ring-gray-400 shadow-yellow-300 shadow-lg"
-                                        : "hover:ring-2 hover:ring-gray-300 hover:border-2 hover:scale-100 scale-75"
+                                        ? "ring-0"
+                                        : "hover:ring-2 hover:scale-100 scale-75"
                                     }`}
                                     >
                                     <div className="text-3xl">{type.icon}</div>
@@ -146,7 +146,7 @@ export default function CreateComplaint() {
                                     placeholder="Enter location"
                                     className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 ${placeholderPaddingClass}`}
                                 />
-                                <button onClick={(e) => handleRenderMapButton(e)} className="bg-accent_blue px-4 rounded-md text-white">
+                                <button onClick={(e) => handleRenderMapButton(e)} className="bg-accent_blue px-4 rounded-md text-white hover:bg-blue-500">
                                     Map
                                 </button>
                             </div>
@@ -189,7 +189,7 @@ export default function CreateComplaint() {
                     </Link>
                     <Link
                         href="/success-complaint"
-                        className="rounded-md bg-accent_blue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#1553DB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        className="rounded-md bg-accent_blue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                         Submit Complaint
                     </Link>

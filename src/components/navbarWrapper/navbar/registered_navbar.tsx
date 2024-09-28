@@ -6,7 +6,7 @@ import UserCircleComponent from './_components/UserCircle';
 const RegisteredNavbar = () => {
 
     return (
-        <div className='bg-accent_blue h-[4rem] flex flex-row items-center px-4 justify-between rounded-b-lg text-white'>
+        <div className='bg-accent_blue h-[4rem] flex flex-row items-center px-4 justify-between text-white'>
             <div className='flex flex-row justify-between gap-x-20 items-center'>
                 <div className='flex flex-row gap-x-4'>
                     <KPLBImage />

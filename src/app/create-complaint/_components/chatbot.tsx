@@ -11,7 +11,7 @@ const Chatbot = () => {
             {!renderChatbotPanel && (
                 <button onClick={() => setRenderChatbotPanel(true)}>
                     <div className='bg-accent_blue lato-bold rounded-t-md py-1 px-12 text-white'>
-                        ChatBot
+                        SISPAA BOT
                     </div>
                 </button>
             )}
@@ -62,7 +62,7 @@ const ChatbotPanel: React.FC<ChatbotPanelProps> = ({ setRenderChatbotPanel }) =>
     return (
         <div className='flex flex-col justify-between bg-white rounded-b-md py-2 w-[21rem] h-[25rem] shadow-xl self-start text-gray-900 border border-gray-300 backdrop-blur-sm p-2 rounded-md'>
             <button onClick={() => setRenderChatbotPanel(false)}>
-                <p>Chatbot Panel</p>
+                <p>SISPAA BOT</p>
             </button>
             <hr className='border-gray-300 my-2' />
 
