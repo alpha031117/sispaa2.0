@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Navbar = () => {
+const NonRegisteredNavbar = () => {
 
     return (
         <div className='bg-accent_blue h-[4rem] flex flex-row items-center px-4 justify-between rounded-b-lg text-white'>
@@ -19,8 +19,6 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='flex flex-row justify-between gap-x-16'>
-                    <Link href="/user-dashboard">Dashboard</Link>
-                    <Link href="/recent-complaints">My Recent Complaints</Link>
                     <Link href="/feeds">Feeds</Link>
                 </div>
             </div>
@@ -28,14 +26,11 @@ const Navbar = () => {
                 <div>
                     EN/MY
                 </div>
-                <div>
-                    <UserCircle />
-                </div>
             </div>
         </div>
     )
 }
-export default Navbar;
+export default NonRegisteredNavbar;
 
 
 
