@@ -19,7 +19,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='flex flex-row justify-between gap-x-16'>
-                    <Link href="/">Dashboard</Link>
+                    <Link href="/user-dashboard">Dashboard</Link>
                     <Link href="/recent-complaints">My Recent Complaints</Link>
                     <Link href="/feeds">Feeds</Link>
                 </div>
