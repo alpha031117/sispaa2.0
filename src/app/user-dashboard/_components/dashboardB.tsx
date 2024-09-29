@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const mockData = [
@@ -48,13 +49,17 @@ const DashboardB = () => {
                 
                 {mockData.map((complaint, index) => (
                     <React.Fragment key={complaint.ID}>
-                        <div className='text-sm'>{index + 1}</div>
-                        <div className='text-sm'>{complaint.title}</div>
-                        <div className='text-sm'>{complaint.date}</div>
-                        <div className={`text-sm ${statusColorMap[complaint.status as keyof typeof statusColorMap] || 'text-gray-500'}`}>
-                            {complaint.status}
-                        </div>
-                        <hr className='col-span-5 w-full border-t border-gray-300' />
+                        
+                            <div className='text-sm'>{index + 1}</div>
+                            <Link href={`/complaint-detail/${complaint.ID}`}>
+                                <div className='text-sm'>{complaint.title}</div>
+                            </Link>
+                            <div className='text-sm'>{complaint.date}</div>
+                            <div className={`text-sm ${statusColorMap[complaint.status as keyof typeof statusColorMap] || 'text-gray-500'}`}>
+                                {complaint.status}
+                            </div>
+                            <hr className='col-span-5 w-full border-t border-gray-300' />
+                        
                     </React.Fragment>
                 ))}
             </div>
