@@ -8,14 +8,14 @@ const NonRegisteredNavbar = () => {
         <div className='bg-accent_blue h-[4rem] flex flex-row items-center px-4 justify-between text-white'>
             <div className='flex flex-row justify-between gap-x-20 items-center'>
                 <div className='flex flex-row gap-x-4'>
-                    {/* <KPLBImage /> */}
-                    <AgencyImage />
+                    <KPLBImage />
+                    {/* <AgencyImage /> */}
                     <div className='flex flex-col'>
                         <div className='lato-bold'>
                             SISPAA 2.0
                         </div>
                         <div className='lato-thin text-xs'>
-                            Sistem Pengurusan Aduan Awam Melaka
+                            Sistem Pengurusan Aduan Awam
                         </div>
                     </div>
                 </div>
