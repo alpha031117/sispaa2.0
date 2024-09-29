@@ -5,7 +5,10 @@ import FloatingChatbotWrapper from "@/components/floatingChatbotWrapper";
 
 export const metadata: Metadata = {
   title: "SISPAA 2.0",
-  description: "Malaysia Complain Management System",
+  description: "Malaysia Complain Management System",  
+  icons: {
+    icon: "images/favicon.ico",
+  },
 };
 
 export default function RootLayout({

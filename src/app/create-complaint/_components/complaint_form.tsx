@@ -23,9 +23,9 @@ export default function CreateComplaint() {
     // Define complaint types array
     const types: TypeOption[] = [
       { label: "Complaint", color: "bg-red-200", icon: "✏️" },
-      { label: "Enquiry", color: "bg-blue-300", icon: "❓" },
-      { label: "Suggestion", color: "bg-blue-300", icon: "💡" },
-      { label: "Appreciation", color: "bg-blue-300", icon: "✏️" }
+    //   { label: "Enquiry", color: "bg-blue-300", icon: "❓" },
+    //   { label: "Suggestion", color: "bg-blue-300", icon: "💡" },
+    //   { label: "Appreciation", color: "bg-blue-300", icon: "✏️" }
     ];
   
     // Handle selection of complaint type
@@ -53,22 +53,24 @@ export default function CreateComplaint() {
                             <label htmlFor="complaint-type" className="block text-sm font-medium leading-6 text-gray-900">
                                 Complaint Type
                             </label>
-                            <div className="mt-2 grid grid-cols-4 gap-4">
+                            <div className="mt-2 grid grid-cols-[4fr_1fr] gap-4">
                                 {types.map((type) => (
                                     <button
-                                    key={type.label}
-                                    onClick={(e) => {e.preventDefault(); handleSelectType(type.label)}}
-                                    className={`${type.color} p-4 rounded-md shadow-lg flex flex-col items-center justify-center ${
-                                        selectedType === type.label
-                                        ? "ring-0"
-                                        : "hover:ring-2 hover:scale-100 scale-75"
-                                    }`}
+                                        key={type.label}
+                                        onClick={(e) => {e.preventDefault(); handleSelectType(type.label)}}
+                                        className={`${type.color} p-4 rounded-md shadow-lg flex flex-col items-center justify-center ${
+                                            selectedType === type.label
+                                            ? "ring-0"
+                                            : "hover:ring-2 hover:scale-100 scale-75"
+                                        }`}
                                     >
-                                    <div className="text-3xl">{type.icon}</div>
-                                    <span className="text-sm font-medium mt-2">{type.label}</span>
+                                        <span className="text-sm font-medium mt-2">{type.label}</span>
                                     </button>
                                 ))}
-                                </div>
+                                <button className="bg-blue-300 w-full p-4 rounded-md shadow-lg flex flex-col items-center justify-center">
+                                    ...
+                                </button>
+                            </div>
                         </div>
 
                         {/* Title */}
@@ -109,11 +111,9 @@ export default function CreateComplaint() {
                                 Category
                             </label>
                             <div className="mt-2">
-                                <select id="category" name="category" className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 ${placeholderPaddingClass}`}>
-                                    <option value="">Select a category</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                <select id="category" name="category" className={`block w-full rounded-md border-0 py-1.5 text-gray-400 p-2 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 ${placeholderPaddingClass}`}>
+                                    <option value="1">Jabatan Persekutuan</option>
+                                    <option value="2">Kerajaan Negeri</option>
                                 </select>
                             </div>
                         </div>
@@ -124,11 +124,22 @@ export default function CreateComplaint() {
                                 Agency
                             </label>
                             <div className="mt-2">
-                                <select id="agency" name="agency" className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 ${placeholderPaddingClass}`}>
+                                <select id="agency" name="agency" className={`block w-full rounded-md border-0 py-1.5 text-gray-400 p-2 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 ${placeholderPaddingClass}`}>
                                     <option value="">Select an agency</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Jabatan Perdana Menteri</option>
+                                    <option value="2">Kementerian Belia & Sukan</option>
+                                    <option value="3">Kementerian Dalam Negeri</option>
+                                    <option value="4">Kementerian Digital</option>
+                                    <option value="5">Kementerian Ekonomi</option>
+                                    <option value="6">Kementerian Pendidikan Malaysia</option>
+                                    <option value="7">Kementerian Pendidikan</option>
+                                    <option value="8">Kementerian Pengangkutan</option>
+                                    <option value="9">Kementerian Kewangan</option>
+                                    <option value="10">Kementerian Komunikasi</option>
+                                    <option value="11">Kementerian Sumber Manusia</option>
+                                    <option value="12">Kementerian Pertanian</option>
+                                    <option value="13">Kementerian Sumber Asli</option>
+                                    <option value="14">Kementerian Perpaduan Negara</option>
                                 </select>
                             </div>
                         </div>
