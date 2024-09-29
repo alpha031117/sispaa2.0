@@ -10,20 +10,24 @@ const TrackingStatus = () => {
     const params = useParams();
     const { ID } = params as { ID: string };
 
-    dummyData.ID = ID;
+    const thisdummyData = dummyData.find((data) => data.ID === ID);
 
-    return (
-        <div className='p-4'>
-            {/* <Breadcrumb /> */}
-			<div className='flex flex-row justify-between'>
-				<div className='w-3/5 '>
-					<MainBodyPage dummyData={dummyData}/>
+	return (
+		<div className='p-4'>
+			{/* <Breadcrumb /> */}
+			{thisdummyData ? (
+				<div className='flex flex-row justify-between'>
+					<div className='w-3/5 '>
+						<MainBodyPage dummyData={thisdummyData}/>
+					</div>
+					<div className='w-2/5'>
+						<RightPanelPage dummyData={thisdummyData}/>
+					</div>
 				</div>
-				<div className='w-2/5'>
-					<RightPanelPage dummyData={dummyData}/>
-				</div>
-			</div>
-        </div>
-    )
+			) : (
+				<div>Data not found</div>
+			)}
+		</div>
+	)
 }
 export default TrackingStatus;

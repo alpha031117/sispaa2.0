@@ -52,7 +52,7 @@ const ComplaintSuccess = () => {
                 </p>
 
                 {/* Back to Home Button */}
-                <Link href="/">
+                <Link href="/user-dashboard">
                     <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300">
                         Back To Home
                     </button>

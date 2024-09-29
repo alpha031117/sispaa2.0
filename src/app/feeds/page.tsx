@@ -3,46 +3,68 @@
 import React from 'react';
 import { FeedCard } from './_components/feed_cards';
 
-type Feed = {
+export type Feed = {
     ID: string;
     title: string;
     content: string;
     date: string;
     agency: string;
     status: string;
-    complaintIds: string[];
+    complaintIds: {
+        ID: string;
+        title: string;
+    }[]
     icon: string;
 };
 
 const mockFeeds: Feed[] = [
     {
-        ID: '101',
+        ID: '001',
         title: 'Noise Complaint: Construction Site',
         content: 'Residents reported persistent noise disturbances from the construction site at 123 Main St.',
         date: '2024-06-01',
         agency: 'Jabatan Keselamatan Jalan Raya',
         status: 'Resolved',
-        complaintIds: ['Construction Site Noise Complaint'],
+        complaintIds: [
+            {
+                ID: '101',
+                title: 'Noise Complaint: Construction Site'
+            }
+        ],
         icon: '/images/Jabatan Keselamatan Jalan Raya.png' // Change to your actual image path
     },
     {
-        ID: '102',
+        ID: '002',
         title: 'Request for Streetlight Repair',
         content: 'Streetlight at 5th Avenue has been malfunctioning for weeks.',
         date: '2024-06-21',
         agency: 'Jabatan Keselamatan Jalan Raya',
         status: 'In Attention',
-        complaintIds: ['Ligth Malfunction at 5th Avenue', 'Streetlight Repair Request'],
+        complaintIds: [
+            {
+                ID: '102',
+                title: 'Request for Streetlight Repair'
+            },
+            {
+                ID: '103',
+                title: 'Pothole Issue on Main St.'
+            }
+        ],
         icon: '/images/Jabatan Keselamatan Jalan Raya.png' // Change to your actual image path
     },
     {
-        ID: '103',
+        ID: '003',
         title: 'Pothole Issue on Main St.',
         content: 'Significant pothole on Main St. causing damage to vehicles.',
         date: '2024-06-23',
         agency: 'Jabatan Keselamatan Jalan Raya',
         status: 'Rejected',
-        complaintIds: ['Main St. Pothole Issue', 'Pothole Repair Request', 'Pothole Damage Report'],
+        complaintIds: [
+            {
+                ID: '103',
+                title: 'Pothole Issue on Main St.'
+            }
+        ],
         icon: '/images/Jabatan Keselamatan Jalan Raya.png' // Change to your actual image path
     },
 ];

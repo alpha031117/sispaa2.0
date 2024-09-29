@@ -9,16 +9,7 @@ import {
 } from "@/components/ui/select";
 import CollapsibleText from './context_cards';
 import Link from 'next/link';
-
-interface Feed {
-    title: string;
-    date: string;
-    agency: string;
-    content: string;
-    status: string;
-    icon: string;
-    complaintIds: string[];
-}
+import { Feed } from '../page';
 
 interface FeedCardProps {
     feed: Feed;
@@ -74,9 +65,9 @@ export const FeedCard: React.FC<FeedCardProps> = ({ feed }) => {
                         <SelectValue placeholder="Linked Complaint" />
                     </SelectTrigger>
                     <SelectContent>
-                        {feed.complaintIds.map((id) => (
-                            <SelectItem key={id} value={id}>
-                                {id}
+                        {feed.complaintIds.map((complaint) => (
+                            <SelectItem key={complaint.ID} value={complaint.ID}>
+                                {complaint.title}
                             </SelectItem>
                         ))}
                     </SelectContent>

@@ -49,13 +49,13 @@ const KPLBImage = () => {
     )
 }
 
-const AgencyImage = () => {
-    return (
-        <div className='relative w-[50px] h-[42px]'>
-            <Image 
-                src='/images/melaka_sispaa_icon.png' 
-                alt='SelangorSISPAA' 
-                fill={true} />
-        </div>
-    )
-}
+// const AgencyImage = () => {
+//     return (
+//         <div className='relative w-[50px] h-[42px]'>
+//             <Image 
+//                 src='/images/melaka_sispaa_icon.png' 
+//                 alt='SelangorSISPAA' 
+//                 fill={true} />
+//         </div>
+//     )
+// }

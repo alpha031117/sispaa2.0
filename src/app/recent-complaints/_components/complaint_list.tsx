@@ -47,7 +47,7 @@ const ComplaintList = () => {
         },
     ];
 
-    const renderStatusBadge = (status: String) => {
+    const renderStatusBadge = (status: string) => {
         let badgeClass = '';
         switch (status) {
             case 'Resolved':

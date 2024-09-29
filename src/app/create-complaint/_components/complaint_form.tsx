@@ -5,11 +5,11 @@ import { PhotoIcon } from '@heroicons/react/24/solid';
 import MapComponent from "./mapComponent";
 import Link from "next/link";
 
-interface TypeOption {
-    label: string;
-    color: string;
-    icon: string;
-  }
+// interface TypeOption {
+//     label: string;
+//     color: string;
+//     icon: string;
+//   }
 
 export default function CreateComplaint() {
     const placeholderPaddingClass = "placeholder:px-3"; // Custom class for placeholder padding
@@ -17,16 +17,18 @@ export default function CreateComplaint() {
     // Define state for the selected type
     const [selectedType, setSelectedType] = useState<string>("Complaint");
 
+    const [renderTypeSelection, setRenderTypeSelection] = useState<boolean>(false);
+
     // Define state for rendering the map
     const [renderMap, setRenderMap] = useState<boolean>(false);
   
     // Define complaint types array
-    const types: TypeOption[] = [
-      { label: "Complaint", color: "bg-red-200", icon: "✏️" },
-      { label: "Enquiry", color: "bg-blue-300", icon: "❓" },
-      { label: "Suggestion", color: "bg-blue-300", icon: "💡" },
-      { label: "Appreciation", color: "bg-blue-300", icon: "🫶" }
-    ];
+    // const types: TypeOption[] = [
+    //   { label: "Complaint", color: "bg-red-200", icon: "✏️" },
+    //   { label: "Enquiry", color: "bg-blue-300", icon: "❓" },
+    //   { label: "Suggestion", color: "bg-blue-300", icon: "💡" },
+    //   { label: "Appreciation", color: "bg-blue-300", icon: "🫶" }
+    // ];
   
     // Handle selection of complaint type
     const handleSelectType = (type: string) => {
@@ -53,8 +55,8 @@ export default function CreateComplaint() {
                             <label htmlFor="complaint-type" className="block text-sm font-medium leading-6 text-gray-900">
                                 Complaint Type
                             </label>
-                            <div className="mt-2 grid grid-cols-[4fr_1fr] gap-4">
-                                {types.map((type) => (
+                            <div className="mt-2 flex flex-row justify-between gap-x-8">
+                                {/* {types.map((type) => (
                                     <button
                                         key={type.label}
                                         onClick={(e) => {e.preventDefault(); handleSelectType(type.label)}}
@@ -66,10 +68,31 @@ export default function CreateComplaint() {
                                     >
                                         <span className="text-sm font-medium mt-2">{type.label}</span>
                                     </button>
-                                ))}
-                                <button className="bg-blue-300 w-full p-4 rounded-md shadow-lg flex flex-col items-center justify-center">
-                                    ...
-                                </button>
+                                ))} */}
+                                <div className="bg-rose-600 text-white border-black border flex-1 rounded-sm py-1 text-center">
+                                    Complaint
+                                </div>
+                                <div>
+                                    <button onClick={(e) => {e.preventDefault(); setRenderTypeSelection(!renderTypeSelection)}} className="border border-gray-800 bg-gray-400 rounded-sm px-4 h-full">
+                                        ...
+                                    </button>
+                                    {renderTypeSelection && (
+                                        <div className="absolute mt-2 bg-white cursor-pointer">
+                                            <div className="border-black border flex-1 rounded-sm py-1 text-center" onClick={(e) => {e.preventDefault(); handleSelectType("Complaint")}}>
+                                                Complaint
+                                            </div>
+                                            <div className="border-black border flex-1 rounded-sm py-1 text-center" onClick={(e) => {e.preventDefault(); handleSelectType("Enquiry")}}>
+                                                Enquiry
+                                            </div>
+                                            <div className="border-black border flex-1 rounded-sm py-1 text-center" onClick={(e) => {e.preventDefault(); handleSelectType("Suggestion")}}>
+                                                Suggestion
+                                            </div>
+                                            <div className="border-black border flex-1 rounded-sm py-1 text-center" onClick={(e) => {e.preventDefault(); handleSelectType("Appreciation")}}>
+                                                Appreciation
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </div>
 

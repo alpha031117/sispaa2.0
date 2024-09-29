@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
-import Breadcrumb from '@/components/breadcrumb';
+// import Breadcrumb from '@/components/breadcrumb';
 import Link from 'next/link';
 
 type PostFeedType = {
