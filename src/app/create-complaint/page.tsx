@@ -12,9 +12,9 @@ const CreateComplaintPage = () => {
     return (
         <>
             {/* Reduced padding on Breadcrumb */}
-            <div className="p-5">
+            {/* <div className="p-5">
                 <Breadcrumb />
-            </div>
+            </div> */}
 
             {/* Main content with reduced top margin */}
             <div className="flex flex-col lg:flex-row gap-4 p-5">

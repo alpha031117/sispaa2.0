@@ -20,7 +20,7 @@ function page() {
 
 	return (
 		<div className='p-4'>
-		<Breadcrumb />
+		{/* <Breadcrumb /> */}
 			<div className='flex flex-row justify-between'>
 				<div className='w-3/5 '>
 					<MainBody dummyData={dummyData} pathname={pathname}/>
