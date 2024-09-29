@@ -37,7 +37,7 @@ const EachAgencyPage = () => {
 
     return (
             <div className='p-4'>
-                <Breadcrumb />
+                {/* <Breadcrumb /> */}
 
                 <div className='grid grid-cols-1 gap-y-12 justify-items-center'>
                     {/* Hero */}

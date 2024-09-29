@@ -1,36 +1,38 @@
 'use client';
 
-import React from 'react'
+import React from 'react';
 import { useParams, usePathname } from 'next/navigation';
 import Breadcrumb from '@/components/breadcrumb';
 import MainBody from './_components/mainBody';
 import RightPanel from './_components/rightPanel';
 import { dummyData } from './_shareDummyData';
 
+function Page() {
+    const params = useParams();
+    const { ID } = params as { ID: string };
+    const pathname = usePathname();
 
+    // Find the specific complaint based on ID
+    const selectedComplaint = dummyData.find(complaint => complaint.ID === ID);
 
-function page() {
-	const params = useParams();
-	const { ID } = params as { ID: string };
-	const pathname = usePathname();
+    if (!selectedComplaint) {
+        return <div>Complaint not found.</div>;
+    }
 
-
-	dummyData.ID = ID;
-
-
-	return (
-		<div className='p-4'>
-		{/* <Breadcrumb /> */}
-			<div className='flex flex-row justify-between'>
-				<div className='w-3/5 '>
-					<MainBody dummyData={dummyData} pathname={pathname}/>
-				</div>
-				<div className='w-2/5'>
-					<RightPanel dummyData={dummyData} pathname={pathname}/>
-				</div>
-			</div>
-		</div>
-	)
+    return (
+        <div className='p-4'>
+            {/* Uncomment the Breadcrumb if needed */}
+            {/* <Breadcrumb /> */}
+            <div className='flex flex-row justify-between'>
+                <div className='w-3/5'>
+                    <MainBody dummyData={selectedComplaint} pathname={pathname} />
+                </div>
+                <div className='w-2/5'>
+                    <RightPanel dummyData={selectedComplaint} pathname={pathname} />
+                </div>
+            </div>
+        </div>
+    );
 }
 
-export default page;
+export default Page;

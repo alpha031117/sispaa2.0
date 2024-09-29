@@ -20,8 +20,7 @@ const MainBody = ({dummyData, pathname}: {dummyData: ComplatDetailType, pathname
 
     return (
         <div className='p-4 flex flex-col gap-y-12'>
-			<div className='lato-bold text-2xl'>Case ID: {dummyData.ID}</div>
-
+			<div className='lato-bold text-2xl'>{dummyData.title}</div>
 			{/* Details */}
 			<div className='flex flex-row justify-between'>
 				<div><span className='text-gray-600'>Submitted By:</span><br/> {dummyData.name}</div>

@@ -8,7 +8,7 @@ export default function Dashboard() {
     <div className='flex flex-col items-center gap-y-16'>
       <DarkGlassBiroImage />
       <div className='lato-bold text-3xl'>
-        Welcome back, User
+        Welcome back, Jayden Lim
       </div>
       <div>
         <DashboardA />
