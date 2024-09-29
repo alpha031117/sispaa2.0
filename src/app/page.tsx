@@ -11,7 +11,7 @@ const ReportPage = () => {
     const [ministriesCount, setMinistriesCount] = useState(0);
     const [agenciesCount, setAgenciesCount] = useState(0);
     const [districtsCount, setDistrictsCount] = useState(0);
-    const [municipalitiesCount, setMunicipalitiesCount] = useState(0);
+    // const [municipalitiesCount, setMunicipalitiesCount] = useState(0);
   
     // Final counts
     const finalReportCount = 944520;
@@ -44,7 +44,7 @@ const ReportPage = () => {
       animateCount(setMinistriesCount, finalMinistriesCount);
       animateCount(setAgenciesCount, finalAgenciesCount);
       animateCount(setDistrictsCount, finalDistrictsCount);
-      animateCount(setMunicipalitiesCount, finalMunicipalitiesCount);
+      // animateCount(setMunicipalitiesCount, finalMunicipalitiesCount);
     }, [finalReportCount, finalMinistriesCount, finalAgenciesCount, finalDistrictsCount, finalMunicipalitiesCount]);
   
     if (!isMounted) {

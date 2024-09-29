@@ -21,7 +21,7 @@ const FloatingChatbot = () => {
     const [conversation, setConversation] = useState<conversation[]>([]);
     const [responseIndex, setResponseIndex] = useState<number>(0);
 
-    const handleSend = (event: any) => {
+    const handleSend = (event: React.FormEvent) => {
         event.preventDefault();
         if (userInput.trim() === '') return;  // Skip if input is empty
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import Breadcrumb from '@/components/breadcrumb';
+// import Link from 'next/link';
+// import Breadcrumb from '@/components/breadcrumb';
 import StatusCard from './_components/status_cards';
 import ComplaintList from './_components/complaint_list';
 

@@ -1,9 +1,19 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { FeedCard } from './_components/feed_cards';
 
-const mockFeeds = [
+type Feed = {
+    id: number;
+    title: string;
+    content: string;
+    date: string;
+    agency: string;
+    status: string;
+    complaintIds: string[];
+};
+
+const mockFeeds: Feed[] = [
     {
         id: 1,
         title: "Successful resolution of Hospital Waiting Time",
@@ -34,10 +44,10 @@ const mockFeeds = [
 ];
 
 const FeedPage = () => {
-    const [feeds, setFeeds] = useState(mockFeeds);
+    // const [feeds, setFeeds] = useState(mockFeeds);
 
     const groupFeedsByMonth = (): [string, typeof mockFeeds][] => {
-        const grouped = feeds.reduce((acc: { [key: string]: typeof mockFeeds }, feed) => {
+        const grouped = mockFeeds.reduce((acc: { [key: string]: typeof mockFeeds }, feed) => {
             const date = new Date(feed.date);
             const monthYear = date.toLocaleString('default', { month: 'long', year: 'numeric' });
             if (!acc[monthYear]) {

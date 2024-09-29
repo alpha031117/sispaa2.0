@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const solved_complaint = [
@@ -51,7 +50,7 @@ export default function SimilarIssueContainer() {
                 </div>
 
                 {solved_complaint.map((person) => (
-                    <Link href={`./complaint-detail/${person.caseID}`}>
+                    <Link key={person.name} href={`./complaint-detail/${person.caseID}`}>
                     <div key={person.name} className="flex w-full justify-between py-5">
                     {/* <img alt="" src={person.imageUrl} className="h-10 w-12 flex-none rounded-full bg-gray-50" /> */}
                     {/* <p className="text-sm font-semibold leading-6 text-gray-900">{person.similarity}</p> */}

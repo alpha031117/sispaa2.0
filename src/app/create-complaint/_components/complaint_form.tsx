@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { PhotoIcon } from '@heroicons/react/24/solid';
-import MapComponent from "./map";
+import MapComponent from "./mapComponent";
 import Link from "next/link";
 
 interface TypeOption {
@@ -25,7 +25,7 @@ export default function CreateComplaint() {
       { label: "Complaint", color: "bg-red-200", icon: "✏️" },
       { label: "Enquiry", color: "bg-blue-300", icon: "❓" },
       { label: "Suggestion", color: "bg-blue-300", icon: "💡" },
-      { label: "Appreciation", color: "bg-blue-300", icon: "✏️" }
+      { label: "Appreciation", color: "bg-blue-300", icon: "🫶" }
     ];
   
     // Handle selection of complaint type

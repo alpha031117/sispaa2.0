@@ -2,14 +2,13 @@
 
 import React from 'react'
 import { useParams, usePathname } from 'next/navigation';
-import Breadcrumb from '@/components/breadcrumb';
 import MainBody from './_components/mainBody';
 import RightPanel from './_components/rightPanel';
 import { dummyData } from './_shareDummyData';
 
 
 
-function page() {
+const ComplaintDetailPage = () => {
 	const params = useParams();
 	const { ID } = params as { ID: string };
 	const pathname = usePathname();
@@ -33,4 +32,4 @@ function page() {
 	)
 }
 
-export default page;
+export default ComplaintDetailPage;

@@ -2,7 +2,7 @@ import React from "react";
 import ComplaintForm from "./_components/complaint_form";
 import Chatbot from "./_components/chatbot";
 import SimilarIssueContainer from "./_containers/similar_issue";
-import Breadcrumb from "@/components/breadcrumb";
+// import Breadcrumb from "@/components/breadcrumb";
 
 const CreateComplaintPage = () => {
     // Define a shared class for all containers

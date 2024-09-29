@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Breadcrumb from '@/components/breadcrumb';
 import MainBodyPage from './_components/mainBody';
 import RightPanelPage from './_components/rightPanel';
 import { dummyData } from '../_shareDummyData';

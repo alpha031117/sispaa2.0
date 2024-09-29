@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComplatDetailType } from '../../_shareDummyData';
-import Link from 'next/link';
 
 const RightPanelPage = ({dummyData}: {dummyData: ComplatDetailType}) => {
 
