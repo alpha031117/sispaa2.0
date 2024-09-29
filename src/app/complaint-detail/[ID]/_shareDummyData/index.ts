@@ -21,7 +21,7 @@ const dummyData: ComplatDetailType[] = [
         title: 'Noise Complaint: Construction Site', // Added title
         name: 'John Doe',
         issued_date: 'June 1, 2024',
-        agency_assigned: 'Construction Department',
+        agency_assigned: 'Jabatan Kerajaan Jalan Raya',
         complaint_details: "Residents in the vicinity have reported persistent noise disturbances from the construction site located at 123 Main St. The noise levels, particularly during early morning hours, are affecting the quality of life and sleep of nearby residents. It is requested that construction hours be adjusted to mitigate these disturbances.",
         status: 'Resolved',
         status_update_date: '2024-06-02',
@@ -39,7 +39,7 @@ const dummyData: ComplatDetailType[] = [
         title: 'Request for Streetlight Repair', // Added title
         name: 'Jane Smith',
         issued_date: 'June 21, 2024',
-        agency_assigned: 'Public Works Department',
+        agency_assigned: 'Jabatan Kerajaan Jalan Raya',
         complaint_details: "The streetlight at the intersection of 5th Avenue and Oak Street has been malfunctioning for several weeks. This has led to poor visibility at night, posing a safety risk for pedestrians and drivers alike. Immediate repair is requested to ensure public safety.",
         status: 'In Attention',
         status_update_date: '2024-06-25',
@@ -52,7 +52,7 @@ const dummyData: ComplatDetailType[] = [
         title: 'Pothole Issue on Main St.', // Added title
         name: 'Mark Johnson',
         issued_date: 'June 23, 2024',
-        agency_assigned: 'Road Maintenance Department',
+        agency_assigned: 'Jabatan Kerajaan Jalan Raya',
         complaint_details: "A significant pothole on Main St. has been causing damage to vehicles and posing a hazard for cyclists. Several residents have reported issues, and there is concern for the potential for accidents. Prompt action is needed to repair the pothole and ensure safe passage for all road users.",
         status: 'Rejected',
         status_update_date: '2024-06-24',
@@ -65,7 +65,7 @@ const dummyData: ComplatDetailType[] = [
         title: 'Request for Park Maintenance', // Added title
         name: 'Emily Davis',
         issued_date: 'July 1, 2024',
-        agency_assigned: 'Parks and Recreation',
+        agency_assigned: 'Jabatan Kerajaan Jalan Raya',
         complaint_details: "The local park has seen a decline in maintenance, with broken benches, overgrown grass, and litter scattered throughout the area. This has made it less enjoyable for families and children who frequent the park. It is requested that the maintenance team address these issues to restore the park to a safe and pleasant state.",
         status: 'Under Investigation',
         status_update_date: '2024-07-05',
@@ -78,7 +78,7 @@ const dummyData: ComplatDetailType[] = [
         title: 'Illegal Dumping Report', // Added title
         name: 'Michael Brown',
         issued_date: 'July 5, 2024',
-        agency_assigned: 'Environmental Services',
+        agency_assigned: 'Jabatan Kerajaan Jalan Raya',
         complaint_details: "Residents have observed illegal dumping occurring in the alley behind the community center. The dumped materials include hazardous waste and construction debris, which pose health and safety risks. Quick removal and increased surveillance in the area are necessary to prevent further incidents.",
         status: 'Resolved',
         status_update_date: '2024-07-06',
@@ -96,7 +96,7 @@ const dummyData: ComplatDetailType[] = [
         title: 'Complaint About Traffic Signal Malfunction', // Added title
         name: 'Sarah Wilson',
         issued_date: 'July 10, 2024',
-        agency_assigned: 'Traffic Department',
+        agency_assigned: 'Jabatan Kerajaan Jalan Raya',
         complaint_details: "The traffic signal at the intersection of 1st and Elm has been malfunctioning intermittently, leading to confusion and potential accidents at the busy intersection. Drivers and pedestrians are unsure when it is safe to proceed. Immediate attention to fix the signal is needed to ensure safety for all road users.",
         status: 'In Attention',
         status_update_date: '2024-07-11',
