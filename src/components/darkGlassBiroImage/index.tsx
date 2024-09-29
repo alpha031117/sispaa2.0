@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 
 const DarkGlassBiroImage = () => {
-    const imageURL = '/images/biro_page_background.png';
-    const iconURL = '/images/biro_sispa_icon.png';
+    const imageURL = '/images/biro_main_bg.jpg';
+    const iconURL = '/images/kplb.png';
 
     return (
         <div className="relative w-full h-[206px]">
@@ -21,10 +21,10 @@ const DarkGlassBiroImage = () => {
                 <div className='text-white absolute left-[390px] top-[36px] text-[52px] bebas-neue-regular title-standout-text'>
                     sistem pengurusan aduan
                 </div>
-                <div className='absolute left-[520px] top-[95px] text-2xl italic font-semibold smartSelangor-standout-text'>
-                    <span className='text-blue-400'>#Smart</span><span className='text-red-600'>Selangor</span>
+                <div className='absolute left-[390px] top-[95px] text-2xl italic font-semibold smartSelangor-standout-text'>
+                    <span className='text-blue-400'>Biro </span><span className='text-red-600'>Pengaduan Awam</span>
                 </div>
-                <div className='absolute right-[60px] top-[10px]'>
+                <div className='absolute left-[200px] top-[36px]'>
                     <Image
                         src={iconURL}
                         alt="Biro Sispa Icon"

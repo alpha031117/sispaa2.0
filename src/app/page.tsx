@@ -59,7 +59,7 @@ const ReportPage = () => {
           </div>
   
           {/* Login Section */}
-          <div className="container mx-auto py-8 text-center">
+          <div className="container mx-auto py-14 text-center">
             <p className="mb-4 text-2xl">Want to file a complaint to us?</p>
             <Link href="/user-dashboard">
               <button className="bg-accent_blue text-white text-base px-4 py-2 rounded-md hover:bg-blue-500 transition duration-200">
@@ -69,7 +69,7 @@ const ReportPage = () => {
           </div>
   
           {/* Steps Section */}
-          <div className="container mx-auto flex justify-center space-x-6 py-8">
+          <div className="container mx-auto flex justify-center space-x-6">
             <ComplaintProcess />
           </div>
   

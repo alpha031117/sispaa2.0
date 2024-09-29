@@ -4,42 +4,46 @@ import React from 'react';
 import { FeedCard } from './_components/feed_cards';
 
 type Feed = {
-    id: number;
+    ID: string;
     title: string;
     content: string;
     date: string;
     agency: string;
     status: string;
     complaintIds: string[];
+    icon: string;
 };
 
 const mockFeeds: Feed[] = [
     {
-        id: 1,
-        title: "Successful resolution of Hospital Waiting Time",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit, augue nec fringilla tincidunt, lacus libero ornare ex, quis lacinia dui neque id purus. Etiam ac orci faucibus libero egestas consequat. Aliquam nec congue justo. Proin dignissim placerat purus at efficitur. Nullam egestas lacus ac libero feugiat commodo. Donec eros lacus, aliquet ut varius et, varius a turpis. Maecenas sollicitudin eget mauris eget mattis. Nunc porttitor ultricies nibh, ac egestas metus viverra vel. In vitae interdum metus, a finibus dolor. Nulla ut placerat sapien. Maecenas molestie, urna ac scelerisque tempus, sem magna dictum mi, et suscipit enim velit eu mi. Nunc placerat non mauris at accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit, augue nec fringilla tincidunt, lacus libero ornare ex, quis lacinia dui neque id purus. Etiam ac orci faucibus libero egestas consequat. Aliquam nec congue justo. Proin dignissim placerat purus at efficitur. Nullam egestas lacus ac libero feugiat commodo. Donec eros lacus, aliquet ut varius et, varius a turpis. Maecenas sollicitudin eget mauris eget mattis. Nunc porttitor ultricies nibh, ac egestas metus viverra vel. In vitae interdum metus, a finibus dolor. Nulla ut placerat sapien. Maecenas molestie, urna ac scelerisque tempus, sem magna dictum mi, et suscipit enim velit eu mi. Nunc placerat non mauris at accumsan.",
-        date: "2024-06-15",
-        agency: "District and Land Offices",
-        status: "Resolved",
-        complaintIds: ["1010000023456"]
+        ID: '101',
+        title: 'Noise Complaint: Construction Site',
+        content: 'Residents reported persistent noise disturbances from the construction site at 123 Main St.',
+        date: '2024-06-01',
+        agency: 'Jabatan Keselamatan Jalan Raya',
+        status: 'Resolved',
+        complaintIds: ['Construction Site Noise Complaint'],
+        icon: '/images/Jabatan Keselamatan Jalan Raya.png' // Change to your actual image path
     },
     {
-        id: 2,
-        title: "Successful resolution of Hospital Waiting Time",
-        content: "We are pleased to announce that we have successfully reduced hospital waiting times by 30% through the implementation of a new appointment system.",
-        date: "2024-06-10",
-        agency: "District and Land Offices",
-        status: "Resolved",
-        complaintIds: ["1010000023456", "1010384356777", "1010384000000"]
+        ID: '102',
+        title: 'Request for Streetlight Repair',
+        content: 'Streetlight at 5th Avenue has been malfunctioning for weeks.',
+        date: '2024-06-21',
+        agency: 'Jabatan Keselamatan Jalan Raya',
+        status: 'In Attention',
+        complaintIds: ['Ligth Malfunction at 5th Avenue', 'Streetlight Repair Request'],
+        icon: '/images/Jabatan Keselamatan Jalan Raya.png' // Change to your actual image path
     },
     {
-        id: 3,
-        title: "Successful resolution of Hospital Waiting Time",
-        content: "We are pleased to announce that we have successfully reduced hospital waiting times by 30% through the implementation of a new appointment system.",
-        date: "2024-05-15",
-        agency: "District and Land Offices",
-        status: "Resolved",
-        complaintIds: ["1010000023456", "1010384859577"]
+        ID: '103',
+        title: 'Pothole Issue on Main St.',
+        content: 'Significant pothole on Main St. causing damage to vehicles.',
+        date: '2024-06-23',
+        agency: 'Jabatan Keselamatan Jalan Raya',
+        status: 'Rejected',
+        complaintIds: ['Main St. Pothole Issue', 'Pothole Repair Request', 'Pothole Damage Report'],
+        icon: '/images/Jabatan Keselamatan Jalan Raya.png' // Change to your actual image path
     },
 ];
 
@@ -67,7 +71,7 @@ const FeedPage = () => {
                 <div className="mb-10" key={monthYear}>
                     <h3 className="text-xl font-semibold mb-4 text-gray-600">{monthYear}</h3>
                     {monthFeeds.map((feed) => (
-                        <FeedCard key={feed.id} feed={feed} />
+                        <FeedCard key={feed.ID} feed={feed} />
                     ))}
                 </div>
             ))}

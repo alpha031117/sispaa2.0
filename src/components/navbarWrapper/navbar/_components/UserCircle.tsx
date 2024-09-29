@@ -19,10 +19,10 @@ const UserCircleComponent = () => {
                 <UserCircle />
             </div>
             {renderMenu && (
-                <div className='absolute right-[1rem] top-[4rem] shadow-lg text-black border bg-white rounded-lg overflow-hidden'>
+                <div className='absolute right-[1rem] top-[4rem] shadow-lg text-gray-950 text-sm border bg-white rounded-lg overflow-hidden'>
                     <div className='flex flex-col justify-start items-center'>
                         <Link href={'/'}><div className='hover:bg-gray-200 p-2 px-4'>Logout</div></Link>
-                        <Link href={'/setting'}><div className='hover:bg-gray-200 p-2 px-4'>Setting</div></Link>
+                        <Link href={'/setting'}><div className='hover:bg-gray-200 p-2 px-4'>Settings</div></Link>
                     </div>
                 </div>
             )}
