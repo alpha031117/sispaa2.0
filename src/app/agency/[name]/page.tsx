@@ -42,7 +42,7 @@ const EachAgencyPage = () => {
                 <div className='grid grid-cols-1 gap-y-12 justify-items-center'>
                     {/* Hero */}
                     <div className='flex flex-col items-center gap-y-4'>
-                        <Image src={`/images/${formattedName}.png`} alt="Agency" width={200} height={200} />
+                        <Image src={`/images/Jabatan Keselamatan Jalan Raya.png`} alt="Agency" width={200} height={200} />
                         <div className='text-2xl'>{formattedName}</div>
                     </div>
 

@@ -8,6 +8,7 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import CollapsibleText from './context_cards';
+import Link from 'next/link';
 
 interface Feed {
     title: string;
@@ -34,10 +35,12 @@ export const FeedCard: React.FC<FeedCardProps> = ({ feed }) => {
     return (
         <div className="p-6 mb-4 bg-white shadow-md rounded-lg">
             {/* Agency Icon and Agency Name */}
-            <div className="flex items-center mb-3">
-                <img alt="Agency Logo" src="/api/placeholder/24/24" className="h-6 w-6 rounded-full bg-gray-50 mr-2" />
-                <p className="text-gray-500 text-base">{feed.agency}</p>
-            </div>
+            <Link href={`./agency/${feed.agency}`}>
+                <div className="flex items-center mb-3">
+                    <img alt="Agency Logo" src="/api/placeholder/24/24" className="h-6 w-6 rounded-full bg-gray-50 mr-2" />
+                    <p className="text-gray-500 hover:text-accent_blue text-base">{feed.agency}</p>
+                </div>
+            </Link>
             
             {/* Title */}
             <h4 className="font-semibold text-xl mb-2">{feed.title}</h4>
